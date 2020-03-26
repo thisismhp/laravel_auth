@@ -8,7 +8,7 @@ use Illuminate\Auth\Middleware\Authenticate as Middleware;
 class Authenticate extends Middleware
 {
 
-    private $except = [];
+    protected $except = [];
 
     public function handle($request, Closure $next, ...$guards)
     {
