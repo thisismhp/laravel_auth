@@ -1,0 +1,19 @@
+{
+    "name": "thisismhp/laravel_auth_except",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Mohammad Hosseinpour",
+            "email": "m.ho3einpour@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "LaravelAuthExcept\\": "src/"
+        }
+    },
+    "require": {
+        "php": ">=7.2",
+        "laravel/framework": "^6.0.0|^7.0.0"
+    }
+}
