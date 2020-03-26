@@ -17,3 +17,7 @@ and fill except array like below :
 $except = ['/foo', '/bar/' => ['GET', 'POST']];
 
 we not support dynamic route yet. ('post/{id}');
+
+#TODO
+
+Add support for dynamic routes.
