@@ -16,14 +16,18 @@ class Authenticate extends Middleware
 
         $method = $request->method();
 
-        if (in_array($uri, $this->except)){
-            return $next($request);
-        }
+        if (is_array($this->except)) {
 
-        if (key_exists($uri, $this->except)){
-            if (is_array($this->except[$uri]) and in_array($method, $this->except[$uri])){
+            if (in_array($uri, $this->except)) {
                 return $next($request);
             }
+
+            if (key_exists($uri, $this->except)) {
+                if (is_array($this->except[$uri]) and in_array($method, $this->except[$uri])) {
+                    return $next($request);
+                }
+            }
+
         }
 
         $this->authenticate($request, $guards);
