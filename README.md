@@ -14,7 +14,7 @@ use LaravelAuthExcept\Authenticate as Middleware;
 
 and fill except array like below :
 
-$except = ['/foo', '/bar/' => ['GET', 'POST']];
+$except = ['/foo', '/bar' => ['GET', 'POST'], '/api/zee' => 'GET'];
 
 we not support dynamic route yet. ('post/{id}');
 
