@@ -12,7 +12,7 @@ class Authenticate extends Middleware
 
     public function handle($request, Closure $next, ...$guards)
     {
-        $uri = $request->getRequestUri();
+        $uri = explode('?', $request->getRequestUri())[0];
 
         $method = $request->method();
 
